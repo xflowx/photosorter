@@ -1,0 +1,21 @@
+source: "/home/user/Pictures/Inbox"
+recursive: true
+shuffle: true
+mode: move        # move | copy
+
+background: "#000000"
+
+extensions:
+  - jpg
+  - jpeg
+  - png
+  - heic
+
+targets:
+  "1": "/home/user/Pictures/Keepers"
+  "2": "/home/user/Pictures/Family"
+  "3": "/home/user/Pictures/To_Edit"
+
+trash:
+  enabled: true
+  key: "0"         # press 0 to send to trash
