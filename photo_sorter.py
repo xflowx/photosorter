@@ -203,7 +203,11 @@ def main():
 
     source = Path(cfg.get("source", "."))
     files = list(source.glob("*.jpg")) + list(source.glob("*.png"))
-
+    
+    shuffle_cfg = cfg.get("shuffle")
+    if not shuffle_cfg: 
+        files.sort()
+    
     targets = {k: v for k, v in cfg.get("targets", {}).items()}
     trash_cfg = cfg.get("trash", {})
     tr_enabled = trash_cfg.get("enabled", False)
@@ -216,3 +220,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
